@@ -1,0 +1,228 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  gap: 1rem;
+}
+
+/* ── BRAND ── */
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.navbar__logo {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  border: 2px solid var(--accent-soft);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.navbar__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.navbar__brand-text { line-height: 1.15; }
+
+.navbar__title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.navbar__subtitle {
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* ── DESKTOP NAV ── */
+
+.navbar__nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar__link {
+  position: relative;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding-bottom: 2px;
+}
+
+.navbar__link:hover { color: var(--accent); }
+.navbar__link--active { color: var(--accent); }
+
+/* underline handled in animation.css */
+
+/* ── RIGHT SIDE ── */
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.navbar__donate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7rem;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+
+.navbar__donate:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ── HAMBURGER ── */
+
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+}
+
+.navbar__hamburger:hover { background: #f3f4f6; }
+
+.navbar__hamburger span {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--text-body);
+  transform-origin: center;
+  transition: transform 0.25s ease, opacity 0.2s ease, width 0.2s ease;
+}
+
+.navbar__hamburger span:nth-child(1) { width: 22px; }
+.navbar__hamburger span:nth-child(2) { width: 16px; }
+.navbar__hamburger span:nth-child(3) { width: 22px; }
+
+.navbar__hamburger--open span:nth-child(1) {
+  width: 20px;
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar__hamburger--open span:nth-child(3) {
+  width: 20px;
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── MOBILE MENU ── */
+
+.navbar__mobile-menu {
+  border-top: 1px solid #f3f4f6;
+  background: #ffffff;
+  padding: 0.5rem 0 1.25rem;
+}
+
+.navbar__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.navbar__mobile-link {
+  display: block;
+  padding: 0.75rem 0.75rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navbar__mobile-link:hover,
+.navbar__mobile-link--active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.navbar__mobile-donate {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.7rem;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.navbar__mobile-donate:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+/* ── BREAKPOINTS ── */
+
+@media (min-width: 768px) {
+  .navbar__nav { display: flex; }
+  .navbar__hamburger { display: none; }
+}
+
+@media (max-width: 400px) {
+  .navbar__subtitle { display: none; }
+  .navbar__title { font-size: 0.82rem; }
+  .navbar__donate { padding: 0.55rem 0.85rem; font-size: 0.82rem; }
+}

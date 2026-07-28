@@ -1,0 +1,95 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 0;
+}
+
+.about__header { max-width: 720px; }
+
+.about__badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.about__title {
+  margin-top: 0.5rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.about__intro {
+  margin-top: 0.75rem;
+  line-height: 1.8;
+  color: var(--text-body);
+  font-size: 1.05rem;
+}
+
+.about__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about__grid { grid-template-columns: 1fr 1fr; }
+}
+
+.about__card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.about__card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.about__card-text {
+  line-height: 1.8;
+  color: var(--text-body);
+  font-size: 0.97rem;
+  margin-bottom: 0.6rem;
+}
+
+.about__belief {
+  background: var(--bg-dark);
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+}
+
+.about__belief-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+  margin-bottom: 0.75rem;
+}
+
+.about__belief-text {
+  line-height: 1.85;
+  color: #e3d3a8;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .about { padding: 2rem 0; gap: 2rem; }
+  .about__title { font-size: 1.8rem; }
+}

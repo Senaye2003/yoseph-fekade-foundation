@@ -1,0 +1,80 @@
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid var(--border-dark);
+  background: var(--bg-dark);
+}
+
+.footer__grid {
+  display: grid;
+  gap: 2.5rem;
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Titles */
+
+.footer__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+}
+
+.footer__heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-muted);
+}
+
+/* Text */
+
+.footer__description {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-on-dark-muted);
+}
+
+.footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-on-dark);
+}
+
+/* Links */
+
+.footer__link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.3rem;
+}
+
+.footer__link {
+  font-size: 0.9rem;
+  color: var(--text-on-dark-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: var(--accent);
+}
+
+/* Bottom */
+
+.footer__bottom {
+  border-top: 1px solid var(--border-dark);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-on-dark-muted);
+}
