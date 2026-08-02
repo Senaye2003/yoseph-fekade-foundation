@@ -12,7 +12,7 @@ const programs = [
     title: "Education Support",
     text:
       "We provide financial assistance, school supplies, and educational resources to students who face barriers to continuing their education — keeping them in school and moving forward.",
-    color: "#1c3a5e",
+    color: "#1e5c46",
     link: "/programs",
   },
   {

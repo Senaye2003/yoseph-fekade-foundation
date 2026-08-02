@@ -8,7 +8,7 @@ const ways = [
     text:
       "Contribute your time, skills, and energy to support foundation initiatives, outreach, and programs that directly benefit students and communities in Ethiopia.",
     action: { label: "Get in touch", to: "/contact" },
-    color: "#1c3a5e",
+    color: "#1e5c46",
   },
   {
     icon: "🏫",

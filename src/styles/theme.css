@@ -5,29 +5,30 @@
 
 :root {
   /* Surfaces */
-  --bg-page: #f6f7f9;          /* cool neutral off-white page bg */
+  --bg-page: #f4efd9;          /* warm green/gold blended page bg (solid fallback) */
+  --bg-page-gradient: linear-gradient(160deg, #eaf4ea 0%, #f8f2d8 45%, #f3e3b2 100%);
   --bg-surface: #ffffff;        /* card background */
-  --bg-soft: #eef1f5;           /* subtle alt surface */
-  --bg-dark: #0d1b2b;           /* navbar / footer / dark sections */
-  --bg-dark-soft: #16283c;
+  --bg-soft: #eef0e0;           /* subtle alt surface */
+  --bg-dark: #0d1f18;           /* navbar / footer / dark sections */
+  --bg-dark-soft: #14342a;
 
   /* Borders */
-  --border: #e2e6ec;
-  --border-strong: #ccd3dc;
-  --border-dark: #263954;
+  --border: #e1e8e3;
+  --border-strong: #cbd8cf;
+  --border-dark: #1f3d31;
 
   /* Text */
-  --text-primary: #10202e;      /* near-black navy for headings */
-  --text-body: #3d4b58;         /* body copy */
-  --text-muted: #6b7784;        /* captions / meta */
-  --text-on-dark: #f3f1e8;
-  --text-on-dark-muted: #b7c2d0;
+  --text-primary: #12241c;      /* near-black forest green for headings */
+  --text-body: #3d4b44;         /* body copy */
+  --text-muted: #6b7c73;        /* captions / meta */
+  --text-on-dark: #f2f5f2;
+  --text-on-dark-muted: #b9c9c1;
 
-  /* Accent — deep navy, institutional and trustworthy */
-  --accent: #1c3a5e;
-  --accent-hover: #14293f;
-  --accent-soft: #e3ebf3;
-  --accent-deep: #0d1f33;
+  /* Accent — deep forest green, institutional and trustworthy */
+  --accent: #1e5c46;
+  --accent-hover: #143f30;
+  --accent-soft: #e2efe7;
+  --accent-deep: #0e2e22;
 
   /* Warm secondary — muted brass/gold for highlights */
   --warm: #a9822f;
@@ -39,9 +40,9 @@
   --radius-lg: 1.25rem;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(13, 27, 43, 0.05), 0 1px 3px rgba(13, 27, 43, 0.07);
-  --shadow: 0 4px 10px rgba(13, 27, 43, 0.06), 0 10px 30px rgba(13, 27, 43, 0.08);
-  --shadow-lg: 0 20px 50px rgba(13, 27, 43, 0.14);
+  --shadow-sm: 0 1px 2px rgba(13, 31, 24, 0.05), 0 1px 3px rgba(13, 31, 24, 0.07);
+  --shadow: 0 4px 10px rgba(13, 31, 24, 0.06), 0 10px 30px rgba(13, 31, 24, 0.08);
+  --shadow-lg: 0 20px 50px rgba(13, 31, 24, 0.14);
 
   /* Type */
   --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -62,6 +63,7 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background: var(--bg-page);
 }
 
 body {
@@ -69,7 +71,7 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.65;
-  background: var(--bg-page);
+  background: var(--bg-page-gradient);
   color: var(--text-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -160,7 +162,7 @@ a:hover {
   border-color: var(--accent-hover);
   color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(28, 58, 94, 0.28);
+  box-shadow: 0 8px 20px rgba(30, 92, 70, 0.28);
 }
 
 .btn-secondary {

@@ -15,7 +15,7 @@ const stats = [
 const programs = [
   {
     title: "Education Support",
-    color: "#1c3a5e",
+    color: "#1e5c46",
     text:
       "We provide financial assistance, school supplies, and educational resources to students who face barriers to continuing their education. Our goal is to help students stay in school and pursue their academic dreams.",
   },
